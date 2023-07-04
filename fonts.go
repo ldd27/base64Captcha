@@ -31,6 +31,13 @@ func LoadFontsChinese() {
 	fontChinese = DefaultEmbeddedFonts.LoadFontByName("fonts/wqy-microhei.ttc")
 }
 
+func LoadFontsSimple() {
+	if len(fontsAll) > 0 {
+		return
+	}
+	fontsAll = fontsSimple()
+}
+
 func LoadFontsAll() {
 	if len(fontsAll) > 0 {
 		return
